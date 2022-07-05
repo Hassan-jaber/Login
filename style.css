@@ -52,13 +52,13 @@ body{
     cursor: pointer;
 }
 .icon-1{
-    background-image: url(assets/icons8-facebook-48.png);
+    background-image: url(images/icons8-facebook-48.png);
 }
 .icon-2{
-    background-image: url(assets/icons8-google-48.png)
+    background-image: url(images/icons8-google-48.png)
 }
 .icon-3{
-    background-image: url(assets/icons8-linkedin-48.png);
+    background-image: url(images/icons8-linkedin-48.png);
 }
 .Sign-Up{
     width: 400px;
