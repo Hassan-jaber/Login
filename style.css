@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    /* background-image: linear-gradient(); */
+    /* background: rgb(148,201,201); */
+    background-color: #EDEDEF;
+}
+.container{
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px 0px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Sign-In{
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    border-radius: 8px 0px 0px 8px;
+}
+.Sign-In h2{
+    text-align: center;
+    margin-top: 100px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+.icon-1,.icon-2,.icon-3{
+    border-radius: 50%;
+    margin-left: 1rem;
+    width: 50px;
+    height: 50px;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon-1{
+    background-image: url(images/icons8-facebook-48.png);
+}
+.icon-2{
+    background-image: url(images/icons8-google-48.png)
+}
+.icon-3{
+    background-image: url(images/icons8-linkedin-48.png);
+}
+.Sign-Up{
+    width: 400px;
+    height: 100%;
+    background-color: #4DC5CE;
+    border-radius: 0px 8px 8px 0px;
+    position: relative;
+}
+form{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+input{
+    width: 300px;
+    height: 40px;
+    background-color: #EDEDEF;
+    border: none;
+}
+::placeholder{
+    font-size: 15px;
+padding-left: 0.5rem;
+}
+form::after{
+    content:"Forget your password?";
+    position: absolute;
+    margin-top: 110px;
+    cursor: pointer;
+    margin-left: -14%;
+}
+
+
+
+  .btn-submit,#btn-submit {
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: 1px solid white;
+    background-color: #4DC5CE;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+    border-radius: 20px;
+    width: 150px;
+    margin-top: 20px;
+  }
+  
+  .btn-submit::before,#btn-submit::before {
+    
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #3cefff;
+    transform-origin: center;
+    transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+  }
+  
+  .btn-submit:hover,#btn-submit:hover {
+    cursor: pointer;
+    color: #161616;
+  }
+  
+  .btn-submit:hover::before,#btn-submit:hover::before  {
+    transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
+  }
+  
+
+
+
+
+.cek{
+    width: 20px;
+    margin-right: 1.1%;
+}
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    margin-left: -36%;
+    width: 100%;
+}
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #4DC5CE;
+}
+
+.txt-Sign-Up,#btn-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+#btn-submit{
+    width: 150px;
+    margin-top: 100px;
+}
+.sign_up{
+    font-size: 30px;
+    font-weight: bold;
+}
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    .container{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    
+        flex-direction: column;
+    }
+    body{
+       background-color: #161616;
+    }
+    .Sign-Up{
+        position: static;
+        background-color: white;
+        height: 0;
+    }
+    #btn-submit{
+        position: absolute;
+        top: 420px;
+        width: 200px;
+    }
+    .btn-submit{
+        width: 200px;
+    }
+    .txt-Sign-Up{
+        visibility: hidden;
+    }
+    form::after{
+        margin-left: -110px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 576.98px) and (max-width: 768px) { 
+    .container{
+        width: 600px;
+        overflow: hidden;
+    }
+    .Sign-Up{
+        width: 300px;
+    }
+    .Sign-In{
+        width: 300px;
+    }
+    input{
+        width: 250px;
+    }
+    form{
+        width: 300px;
+    }
+ }
